@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wind & Wonder</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Stalinist+One&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Asimovian&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+
+  <!-- Your existing CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="text-white relative overflow-hidden">
+
+  <!-- Background Layers -->
+  <div id="background-wrapper">
+    <div class="bg-layer" id="bg1"></div>
+    <div class="bg-layer" id="bg2"></div>
+  </div>
+
+  <!-- Main Container -->
+  <div id="container" class="h-screen flex justify-center items-center relative z-[1]">
+
+    <!-- Theme icon -->
+    <div class="theme-icon absolute top-10 right-12">
+      <img src="assets/themeicon.svg" alt="Toggle Theme" class="w-[30px] h-[30px] bg-white rounded-full cursor-pointer" />
+    </div>
+
+    <!-- Header -->
+    <h2 id="name" class="absolute top-10 left-6 font-[Asimovian] text-white uppercase text-xl leading-5 font-normal">
+      Wind & <br />Wonder
+    </h2>
+
+    <!-- Weather Box -->
+    <div class="weather-box flex w-[940px] h-[400px] absolute top-[30%]">
+
+      <!-- Left Box -->
+      <div id="leftbox" class="w-[60%] h-full flex flex-col">
+        
+        <!-- Top Search -->
+        <div id="left-top-upper-search" class="h-[30%] relative">
+          <div class="search-container">
+            <input 
+              type="text" 
+              id="city-input"
+              placeholder="Search..." 
+              onkeydown="handleKey(event)" 
+              class="search-input absolute top-[20%] left-[100px] rounded-full px-4 py-2 text-white text-base bg-[rgba(62,62,64,0.4)] w-1/10 placeholder-white"
+            />
+          </div>
+        </div>
+
+        <!-- Bottom Left -->
+        <div id="left-bottom-lower" class="h-[70%]">
+          <!-- Additional content can go here -->
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div id="divider" class="w-[2.5px] h-[70%] bg-white mx-auto self-center rounded-[1px] shadow-[0_0_6px_2px_rgba(255,255,255,0.7)]"></div>
+
+      <!-- Right Box -->
+      <div id="rightbox" class="w-[40%] h-full">
+        <div id="right-top" class="h-[60%]">
+          <div id="right-top-upper" class="h-[70%] flex">
+            <div id="right-top-upper-half-left-WeatherIcon" class="w-1/2 flex items-center justify-center text-white text-[50px] font-normal">
+              ☕️
+            </div>
+            <div id="right-top-upper-half-right-temprature" class="w-1/2 flex pr-[50px] items-center justify-center text-[80px] font-[400] font-[Asimovian]">
+              --°C
+            </div>
+          </div>
+          <div id="right-top-half-lower-CityName" class="h-[30%] flex items-center justify-center text-[20px] font-[400]">
+            📍City
+          </div>
+        </div>
+
+        <div id="right-half-bottom-misc" class="h-[40%]">
+          <!-- Additional weather info (humidity, wind, etc.) -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>

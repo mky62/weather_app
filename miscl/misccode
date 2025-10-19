@@ -1,0 +1,144 @@
+ <!-- new codde intendaton -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wind & Wonder</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Stalinist+One&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Asimovian&display=swap" rel="stylesheet" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Background Layers -->
+  <div id="background-wrapper">
+    <div class="bg-layer" id="background1"></div>
+    <div class="bg-layer" id="background2"></div>
+  </div>
+
+  <!-- Main Container -->
+  <div id="container">
+    <div class="theme-toggle">
+      <img src="assets/themeicon.svg" alt="Toggle Theme" />
+    </div>
+    
+    <h2 id="title">Wind & <br /> Wonder</h2>
+    
+    <div class="weather-box">
+      <div id="left-info">
+        <div id="left-top-search">
+          <div class="search-container">
+            <input type="text" placeholder="Search..." class="search-input" />
+          </div>
+        </div>
+        <div id="left-bottom-wind-humidity"></div>
+      </div>
+
+      <div id="divider"></div>
+
+      <div id="right-info">
+        <div id="top-right">
+          <div id="top-right-temp">
+            <div id="temp-icon">🌦️</div>
+            <div id="temp-value">24°</div>
+          </div>
+          <div id="top-right-location">📍city</div>
+        </div>
+        <div id="bottom-right"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+
+</body>
+</html>
+
+
+
+  <!-- refactor -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wind & Wonder</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Stalinist+One&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Asimovian&display=swap" rel="stylesheet" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Background Layers -->
+  <div id="background-wrapper">
+    <div class="bg-layer" id="background1"></div>
+    <div class="bg-layer" id="background2"></div>
+  </div>
+
+  <!-- Main Container (Using <main> for the main content) -->
+  <main id="container">
+    
+    <!-- Theme Toggle (Use <button> for theme switching action) -->
+    <button class="theme-toggle">
+      <img src="assets/themeicon.svg" alt="Toggle Theme" />
+    </button>
+    
+    <!-- Title Section (Keeping it as <h2> for now but wrapped in <header>) -->
+    <header>
+      <h2 id="title">Wind & <br /> Wonder</h2>
+    </header>
+    
+    <!-- Weather Information Box -->
+    <section class="weather-box">
+      
+      <!-- Left Information Section (Left column) -->
+      <section id="left-info">
+        <div id="top-left">
+          <!-- Search Form -->
+          <form class="search-container">
+            <input type="text" placeholder="Search..." class="search-input" />
+          </form>
+        </div>
+        <div id="bottom-left"></div>
+      </section>
+
+      <!-- Divider (Kept as a simple <div> since it doesn't need a semantic tag) -->
+      <div id="divider"></div>
+
+      <!-- Right Information Section (Right column) -->
+      <section id="right-info">
+        <section id="top-right">
+          <div id="top-right-temp">
+            <!-- Weather Icon and Temperature -->
+            <span id="temp-icon">🌦️</span>
+            <span id="temp-value">24°</span>
+          </div>
+          <div id="location">📍city</div>
+        </section>
+        <div id="bottom-right"></div>
+      </section>
+    </section>
+    
+  </main>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+
+</body>
+</html>
