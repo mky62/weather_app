@@ -81,3 +81,25 @@ html, body {
 .search-input::placeholder {
   color: white;
 }
+
+
+.center-border {
+  position: relative;
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Create a short centered line using a pseudo-element */
+.center-border::after {
+  content: "";
+  position: absolute;
+  bottom: 0;       /* at the bottom of the button */
+  left: 50%;       /* start at the middle */
+  transform: translateX(-50%); /* center it horizontally */
+  width: 60%;      /* adjust width for desired length */
+  height: 1px;     /* thickness of the line */
+  background-color: rgb(255, 255, 255); /* color of the border */
+}
